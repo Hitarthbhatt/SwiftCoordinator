@@ -9,28 +9,43 @@ import SwiftUI
 
 struct SecondView: View {
     
-    @ObservedObject var secondViewModel: SecondViewCoordinator
+    @ObservedObject var secondViewCoordinator: SecondViewCoordinator
     @EnvironmentObject var homeCoordinator: HomeCoordinator
     
     var body: some View {
-        Button(action: {
-            secondViewModel.popToRootView = true
-        }, label: {
-            Text("Go To Root")
-                .padding(10)
-        })
-        .foregroundColor(.white)
-        .background(Color.purple)
-        .buttonStyle(BorderedButtonStyle())
-        .cornerRadius(10)
-        .padding()
-        .navigationBarHidden(true)
+        
+        VStack {
+            Button(action: {
+                secondViewCoordinator.popToPrevious()
+            }, label: {
+                Text("Go Back")
+                    .padding(10)
+                    .foregroundColor(.white)
+                    .background(Color.purple)
+                    .buttonStyle(BorderedButtonStyle())
+                    .cornerRadius(10)
+                    .padding()
+            })
+            
+            Button(action: {
+                homeCoordinator.popToRootView = true
+            }, label: {
+                Text("Go To Root")
+                    .padding(10)
+                    .foregroundColor(.white)
+                    .background(Color.purple)
+                    .buttonStyle(BorderedButtonStyle())
+                    .cornerRadius(10)
+                    .padding()
+            })
+        }
+        .navigationBarBackButtonHidden(true)
         .navigationTitle("Second Screen")
     }
 }
 
-//struct SecondView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SecondView()
-//    }
-//}
+struct SecondView_Previews: PreviewProvider {
+    static var previews: some View {
+        SecondView(secondViewCoordinator: SecondViewCoordinator(coordinator: HomeCoordinator()))
+    }
+}

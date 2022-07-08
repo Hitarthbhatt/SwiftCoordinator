@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct SwiftCoordinatorApp: App {
-    
     var body: some Scene {
         WindowGroup {
             LoginView()

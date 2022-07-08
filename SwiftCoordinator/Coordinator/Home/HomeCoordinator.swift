@@ -9,12 +9,14 @@ import SwiftUI
 import Combine
 
 class HomeCoordinator: ObservableObject, Coordinator {
+    // Declared from 'Coordinator' protocol.
     @Published var popToRootView: Bool?
     
     @Published var firstViewCoordinator: FirstViewCoordinator?
     @Published var secondViewCoordinator: SecondViewCoordinator?
     
-    @Published var sheetViewModel: SheetViewModel?
+    @Published var showFirstViewSheet: Bool = false
+    @Published var showFirstViewPopover: Bool = false
     
     var cancellables: Set<AnyCancellable> = []
     
@@ -40,9 +42,6 @@ class HomeCoordinator: ObservableObject, Coordinator {
         }
         if let viewModel = coordinator as? SecondViewCoordinator {
             secondViewCoordinator = viewModel
-        }
-        if let viewModel = coordinator as? SheetViewModel {
-            sheetViewModel = viewModel
         }
     }
     

@@ -13,11 +13,11 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             homeView()
-                .navigation(item: $homeCoordinator.firstViewCoordinator) { viewModel in
-                    FirstView(firstViewModel: viewModel)
+                .navigation(item: $homeCoordinator.firstViewCoordinator) { coordinator in
+                    FirstView(firstViewCoordinator: coordinator)
                 }
-                .sheetView(item: $homeCoordinator.sheetViewModel) { viewModel in
-                    PresentView()
+                .sheet(item: $homeCoordinator.secondViewCoordinator) { coordinator in
+                    SecondView(secondViewCoordinator: coordinator)
                 }
         }.environmentObject(homeCoordinator)
     }
@@ -42,12 +42,12 @@ struct HomeView: View {
                 }
                 
                 boxView(name: "Sheet", color: .orange) {
-                    homeCoordinator.openView(coordinator: SheetViewModel())
+                    homeCoordinator.openView(coordinator: SecondViewCoordinator(coordinator: homeCoordinator.self))
                 }
             }
             
-            boxView(name: "Popover", color: .indigo) {
-                
+            boxView(name: "Full Screen", color: .indigo) {
+                // Change sheet modifier to full screen modifier.
             }.padding()
             
             Spacer()

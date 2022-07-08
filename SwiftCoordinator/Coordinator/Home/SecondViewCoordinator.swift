@@ -1,5 +1,5 @@
 //
-//  FirstViewModel.swift
+//  SecondViewModel.swift
 //  SwiftCoordinator
 //
 //  Created by Hitarth on 06/07/22.
@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-class FirstViewCoordinator: ObservableObject, Coordinator {
+class SecondViewCoordinator: ObservableObject, Coordinator, Identifiable {
     
-    @Published var secondViewCoordinator: SecondViewCoordinator?
-    
-    private unowned let coordinator: Coordinator
+    private let coordinator: Coordinator
     
     init(coordinator: Coordinator) {
         self.coordinator = coordinator
@@ -22,9 +20,6 @@ class FirstViewCoordinator: ObservableObject, Coordinator {
     }
     
     func openView<T>(coordinator: T) where T : ObservableObject {
-        if let viewModel = coordinator as? SecondViewCoordinator {
-            secondViewCoordinator = viewModel
-        }
     }
     
     func closeView<T>(coordinator: T) where T : ObservableObject {

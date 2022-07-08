@@ -1,30 +1,13 @@
 //
-//  View+Navigation.swift
-//  Recipes
+//  NavigationModifier.swift
+//  SwiftCoordinator
 //
-//  Created by Paul Kraft on 05.01.21.
+//  Created by Hitarth on 06/07/22.
 //
 
 import SwiftUI
 
 extension View {
-
-    func onNavigation(_ action: @escaping () -> Void) -> some View {
-        let isActive = Binding(
-            get: { false },
-            set: { newValue in
-                if newValue {
-                    action()
-                }
-            }
-        )
-        return NavigationLink(
-            destination: EmptyView(),
-            isActive: isActive
-        ) {
-            self
-        }
-    }
 
     func navigation<Item, Destination: View>(
         item: Binding<Item?>,
@@ -43,7 +26,7 @@ extension View {
         }
     }
 
-    func navigation<Destination: View>(
+    private func navigation<Destination: View>(
         isActive: Binding<Bool>,
         @ViewBuilder destination: () -> Destination
     ) -> some View {
@@ -55,5 +38,4 @@ extension View {
             ).isDetailLink(false)
         )
     }
-
 }

@@ -1,5 +1,5 @@
 //
-//  SignUpView.swift
+//  LoginView.swift
 //  SwiftCoordinator
 //
 //  Created by Hitarth on 07/07/22.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct SignUpView: View {
+struct LoginView: View {
     
-    @ObservedObject var signupViewModel: SignUpViewModel
+    @StateObject var loginViewModel = LoginViewCoordinator()
     @State var emailField: String = ""
     @State var passwordField: String = ""
     
@@ -20,23 +20,26 @@ struct SignUpView: View {
                 Spacer()
                 credentialField()
                 
-                signUpButton {
-                    signupViewModel.coordinator.changeRootView(view: HomeView())
+                loginButton {
+                    loginViewModel.changeRootView(view: HomeView())
                 }
                 
-                goBackButton {
-                    signupViewModel.popToPrevious()
+                signUpButton {
+                    loginViewModel.openView(coordinator: SignUpViewCoordinator(coordinator: loginViewModel.self))
                 }
                 
                 Spacer()
             } // VStack
+            .navigation(item: $loginViewModel.signUpViewCoordinator) { viewModel in
+                SignUpView(signupViewModel: viewModel)
+            }
         }.navigationBarHidden(true)
     }
     
     func headerView() -> some View {
         HStack {
             Image(systemName: "key.icloud.fill")
-            Text("Sign Up")
+            Text("Login View")
                 .fontWeight(.bold)
         }
         .font(.title)
@@ -60,11 +63,11 @@ struct SignUpView: View {
         } // VStack
     }
     
-    func signUpButton(action: @escaping ()->Void) -> some View {
+    func loginButton(action: @escaping ()->Void) -> some View {
         Button(action: {
             action()
         }, label: {
-            Text("Sign Up")
+            Text("Login")
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
                 .frame(width: 120, height: 40)
@@ -74,14 +77,21 @@ struct SignUpView: View {
         })
     }
     
-    func goBackButton(action: @escaping ()->Void) -> some View {
+    func signUpButton(action: @escaping ()->Void) -> some View {
         Button(action: {
             action()
         }, label: {
-            Text("Go Back")
+            Text("Create new account")
                 .fontWeight(.semibold)
                 .foregroundColor(.blue)
                 .padding(.top, 8)
         })
+    }
+    
+}
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
     }
 }

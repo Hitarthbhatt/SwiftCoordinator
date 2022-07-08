@@ -1,5 +1,5 @@
 //
-//  SignUpViewModel.swift
+//  SignUpViewCoordinator.swift
 //  SwiftCoordinator
 //
 //  Created by Hitarth on 08/07/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class SignUpViewModel: ObservableObject {
+class SignUpViewCoordinator: ObservableObject {
     
     let coordinator: Coordinator
     

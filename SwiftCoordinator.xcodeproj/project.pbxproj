@@ -7,38 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC2AFF1A28782D5E0042F7E4 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2AFF1828782D5E0042F7E4 /* PresentView.swift */; };
-		BC2AFF1B28782D5E0042F7E4 /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2AFF1928782D5E0042F7E4 /* SheetViewModel.swift */; };
 		BC846DB02875D4CD0016393F /* SwiftCoordinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DAF2875D4CD0016393F /* SwiftCoordinatorApp.swift */; };
 		BC846DB22875D4CD0016393F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DB12875D4CD0016393F /* HomeView.swift */; };
 		BC846DB42875D4CF0016393F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC846DB32875D4CF0016393F /* Assets.xcassets */; };
 		BC846DB72875D4CF0016393F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC846DB62875D4CF0016393F /* Preview Assets.xcassets */; };
 		BC846DCA2875DC040016393F /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DC92875DC040016393F /* FirstView.swift */; };
 		BC846DCC2875DC1F0016393F /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DCB2875DC1F0016393F /* SecondView.swift */; };
-		BC846DCD2875DC990016393F /* View+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DC02875D5E10016393F /* View+Navigation.swift */; };
-		BC846DCE2875DC9C0016393F /* SheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DBE2875D5E10016393F /* SheetModifier.swift */; };
-		BC846DCF2875DC9C0016393F /* PopoverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DBF2875D5E10016393F /* PopoverModifier.swift */; };
+		BC846DCD2875DC990016393F /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DC02875D5E10016393F /* NavigationModifier.swift */; };
 		BC846DD12875F7680016393F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DD02875F7680016393F /* HomeCoordinator.swift */; };
 		BC846DE02875F98C0016393F /* SecondViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DDF2875F98C0016393F /* SecondViewCoordinator.swift */; };
 		BC846DE22875F9B00016393F /* FirstViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DE12875F9B00016393F /* FirstViewCoordinator.swift */; };
 		BC846DE42875FAEA0016393F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DE32875FAEA0016393F /* Coordinator.swift */; };
 		BCC4E20628770438002E56DD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4E20528770438002E56DD /* LoginView.swift */; };
 		BCC4E2082877047F002E56DD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4E2072877047F002E56DD /* SignUpView.swift */; };
-		BCC4E20A2877440F002E56DD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4E2092877440F002E56DD /* LoginViewModel.swift */; };
-		BCC4E20D28775E14002E56DD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4E20C28775E14002E56DD /* SignUpViewModel.swift */; };
+		BCC4E20A2877440F002E56DD /* LoginViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4E2092877440F002E56DD /* LoginViewCoordinator.swift */; };
+		BCC4E20D28775E14002E56DD /* SignUpViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4E20C28775E14002E56DD /* SignUpViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC2AFF1828782D5E0042F7E4 /* PresentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
-		BC2AFF1928782D5E0042F7E4 /* SheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
 		BC846DAC2875D4CD0016393F /* SwiftCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC846DAF2875D4CD0016393F /* SwiftCoordinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCoordinatorApp.swift; sourceTree = "<group>"; };
 		BC846DB12875D4CD0016393F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BC846DB32875D4CF0016393F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC846DB62875D4CF0016393F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BC846DBE2875D5E10016393F /* SheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModifier.swift; sourceTree = "<group>"; };
-		BC846DBF2875D5E10016393F /* PopoverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModifier.swift; sourceTree = "<group>"; };
-		BC846DC02875D5E10016393F /* View+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigation.swift"; sourceTree = "<group>"; };
+		BC846DC02875D5E10016393F /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
 		BC846DC92875DC040016393F /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		BC846DCB2875DC1F0016393F /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		BC846DD02875F7680016393F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -47,8 +39,8 @@
 		BC846DE32875FAEA0016393F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BCC4E20528770438002E56DD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BCC4E2072877047F002E56DD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		BCC4E2092877440F002E56DD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		BCC4E20C28775E14002E56DD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		BCC4E2092877440F002E56DD /* LoginViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewCoordinator.swift; sourceTree = "<group>"; };
+		BCC4E20C28775E14002E56DD /* SignUpViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,31 +54,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC2AFF1528782D4F0042F7E4 /* PresentView */ = {
-			isa = PBXGroup;
-			children = (
-				BC2AFF1728782D570042F7E4 /* View */,
-				BC2AFF1628782D570042F7E4 /* ViewModel */,
-			);
-			path = PresentView;
-			sourceTree = "<group>";
-		};
-		BC2AFF1628782D570042F7E4 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				BC2AFF1928782D5E0042F7E4 /* SheetViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BC2AFF1728782D570042F7E4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BC2AFF1828782D5E0042F7E4 /* PresentView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		BC846DA32875D4CD0016393F = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +76,6 @@
 				BC846DAF2875D4CD0016393F /* SwiftCoordinatorApp.swift */,
 				BC846DC32875DA850016393F /* Coordinator */,
 				BC846DC82875DBF80016393F /* Modules */,
-				BC846DBD2875D5E10016393F /* ViewModifiers */,
 				BC846DB32875D4CF0016393F /* Assets.xcassets */,
 				BC846DB52875D4CF0016393F /* Preview Content */,
 			);
@@ -124,23 +90,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BC846DBD2875D5E10016393F /* ViewModifiers */ = {
-			isa = PBXGroup;
-			children = (
-				BC846DBE2875D5E10016393F /* SheetModifier.swift */,
-				BC846DBF2875D5E10016393F /* PopoverModifier.swift */,
-				BC846DC02875D5E10016393F /* View+Navigation.swift */,
-			);
-			path = ViewModifiers;
-			sourceTree = "<group>";
-		};
 		BC846DC32875DA850016393F /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				BC846DC02875D5E10016393F /* NavigationModifier.swift */,
 				BC846DE32875FAEA0016393F /* Coordinator.swift */,
-				BC846DD02875F7680016393F /* HomeCoordinator.swift */,
-				BC846DE12875F9B00016393F /* FirstViewCoordinator.swift */,
-				BC846DDF2875F98C0016393F /* SecondViewCoordinator.swift */,
+				BCB86FEB287880B9004CAFED /* Home */,
+				BCB86FEC287880CA004CAFED /* Authentication */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -152,7 +108,6 @@
 				BC846DD92875F89C0016393F /* Home */,
 				BC846DD82875F8770016393F /* FirstView */,
 				BC846DDA2875F8B30016393F /* SecondView */,
-				BC2AFF1528782D4F0042F7E4 /* PresentView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -181,31 +136,32 @@
 			path = SecondView;
 			sourceTree = "<group>";
 		};
-		BCC4E2022877041C002E56DD /* Authentication */ = {
+		BCB86FEB287880B9004CAFED /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BCC4E20B28775E0C002E56DD /* ViewModel */,
-				BCC4E20328770428002E56DD /* View */,
+				BC846DD02875F7680016393F /* HomeCoordinator.swift */,
+				BC846DE12875F9B00016393F /* FirstViewCoordinator.swift */,
+				BC846DDF2875F98C0016393F /* SecondViewCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BCB86FEC287880CA004CAFED /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				BCC4E2092877440F002E56DD /* LoginViewCoordinator.swift */,
+				BCC4E20C28775E14002E56DD /* SignUpViewCoordinator.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		BCC4E20328770428002E56DD /* View */ = {
+		BCC4E2022877041C002E56DD /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				BCC4E20528770438002E56DD /* LoginView.swift */,
 				BCC4E2072877047F002E56DD /* SignUpView.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BCC4E20B28775E0C002E56DD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				BCC4E2092877440F002E56DD /* LoginViewModel.swift */,
-				BCC4E20C28775E14002E56DD /* SignUpViewModel.swift */,
-			);
-			path = ViewModel;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,18 +238,14 @@
 				BC846DE42875FAEA0016393F /* Coordinator.swift in Sources */,
 				BC846DB22875D4CD0016393F /* HomeView.swift in Sources */,
 				BC846DCA2875DC040016393F /* FirstView.swift in Sources */,
-				BC846DCF2875DC9C0016393F /* PopoverModifier.swift in Sources */,
-				BC846DCD2875DC990016393F /* View+Navigation.swift in Sources */,
+				BC846DCD2875DC990016393F /* NavigationModifier.swift in Sources */,
 				BCC4E20628770438002E56DD /* LoginView.swift in Sources */,
-				BCC4E20D28775E14002E56DD /* SignUpViewModel.swift in Sources */,
-				BC2AFF1A28782D5E0042F7E4 /* PresentView.swift in Sources */,
+				BCC4E20D28775E14002E56DD /* SignUpViewCoordinator.swift in Sources */,
 				BC846DE22875F9B00016393F /* FirstViewCoordinator.swift in Sources */,
-				BCC4E20A2877440F002E56DD /* LoginViewModel.swift in Sources */,
+				BCC4E20A2877440F002E56DD /* LoginViewCoordinator.swift in Sources */,
 				BCC4E2082877047F002E56DD /* SignUpView.swift in Sources */,
 				BC846DE02875F98C0016393F /* SecondViewCoordinator.swift in Sources */,
 				BC846DB02875D4CD0016393F /* SwiftCoordinatorApp.swift in Sources */,
-				BC846DCE2875DC9C0016393F /* SheetModifier.swift in Sources */,
-				BC2AFF1B28782D5E0042F7E4 /* SheetViewModel.swift in Sources */,
 				BC846DD12875F7680016393F /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

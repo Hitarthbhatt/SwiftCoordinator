@@ -31,6 +31,9 @@ extension Coordinator {
         
         window?.rootViewController = UIHostingController(rootView: view)
         window?.makeKeyAndVisible()
+        
+        guard let window = window else { return }
+        UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve, animations: {})
     }
 }
 

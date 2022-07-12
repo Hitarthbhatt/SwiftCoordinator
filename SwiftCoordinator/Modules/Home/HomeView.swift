@@ -46,8 +46,8 @@ struct HomeView: View {
                 }
             }
             
-            boxView(name: "Full Screen", color: .indigo) {
-                // Change sheet modifier to full screen modifier.
+            boxView(name: "Log Out", color: .indigo) {
+                homeCoordinator.changeRootView(view: LoginView())
             }.padding()
             
             Spacer()

@@ -38,7 +38,7 @@ struct HomeView: View {
             
             HStack(spacing: 50) {
                 boxView(name: "Navigation", color: .purple) {
-                    homeCoordinator.openView(coordinator: FirstViewCoordinator(coordinator: homeCoordinator.self))
+                    homeCoordinator.openView(coordinator: FirstViewCoordinator(coordinator: homeCoordinator))
                 }
                 
                 boxView(name: "Sheet", color: .orange) {

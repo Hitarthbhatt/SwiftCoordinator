@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-class FirstViewCoordinator: ObservableObject, Coordinator {
+class FirstViewCoordinator: ObservableObject, SwiftUICoordinator {
     
     @Published var secondViewCoordinator: SecondViewCoordinator?
     
-    private let coordinator: Coordinator
+    private let coordinator: SwiftUICoordinator
     
-    init(coordinator: Coordinator) {
+    init(coordinator: SwiftUICoordinator) {
         self.coordinator = coordinator
     }
     

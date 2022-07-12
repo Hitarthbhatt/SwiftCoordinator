@@ -9,9 +9,9 @@ import SwiftUI
 
 class SignUpViewCoordinator: ObservableObject {
     
-    let coordinator: Coordinator
+    let coordinator: SwiftUICoordinator
     
-    init(coordinator: Coordinator) {
+    init(coordinator: SwiftUICoordinator) {
         self.coordinator = coordinator
     }
     

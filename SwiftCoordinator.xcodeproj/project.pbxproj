@@ -17,7 +17,7 @@
 		BC846DD12875F7680016393F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DD02875F7680016393F /* HomeCoordinator.swift */; };
 		BC846DE02875F98C0016393F /* SecondViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DDF2875F98C0016393F /* SecondViewCoordinator.swift */; };
 		BC846DE22875F9B00016393F /* FirstViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DE12875F9B00016393F /* FirstViewCoordinator.swift */; };
-		BC846DE42875FAEA0016393F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DE32875FAEA0016393F /* Coordinator.swift */; };
+		BC846DE42875FAEA0016393F /* SwiftUICoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC846DE32875FAEA0016393F /* SwiftUICoordinator.swift */; };
 		BCC4E20628770438002E56DD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4E20528770438002E56DD /* LoginView.swift */; };
 		BCC4E2082877047F002E56DD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4E2072877047F002E56DD /* SignUpView.swift */; };
 		BCC4E20A2877440F002E56DD /* LoginViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4E2092877440F002E56DD /* LoginViewCoordinator.swift */; };
@@ -36,7 +36,7 @@
 		BC846DD02875F7680016393F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		BC846DDF2875F98C0016393F /* SecondViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewCoordinator.swift; sourceTree = "<group>"; };
 		BC846DE12875F9B00016393F /* FirstViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewCoordinator.swift; sourceTree = "<group>"; };
-		BC846DE32875FAEA0016393F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BC846DE32875FAEA0016393F /* SwiftUICoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICoordinator.swift; sourceTree = "<group>"; };
 		BCC4E20528770438002E56DD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BCC4E2072877047F002E56DD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BCC4E2092877440F002E56DD /* LoginViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewCoordinator.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				BC846DC02875D5E10016393F /* NavigationModifier.swift */,
-				BC846DE32875FAEA0016393F /* Coordinator.swift */,
+				BC846DE32875FAEA0016393F /* SwiftUICoordinator.swift */,
 				BCB86FEB287880B9004CAFED /* Home */,
 				BCB86FEC287880CA004CAFED /* Authentication */,
 			);
@@ -235,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC846DCC2875DC1F0016393F /* SecondView.swift in Sources */,
-				BC846DE42875FAEA0016393F /* Coordinator.swift in Sources */,
+				BC846DE42875FAEA0016393F /* SwiftUICoordinator.swift in Sources */,
 				BC846DB22875D4CD0016393F /* HomeView.swift in Sources */,
 				BC846DCA2875DC040016393F /* FirstView.swift in Sources */,
 				BC846DCD2875DC990016393F /* NavigationModifier.swift in Sources */,

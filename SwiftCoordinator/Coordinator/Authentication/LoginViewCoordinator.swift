@@ -7,7 +7,7 @@
 
 import Combine
 
-class LoginViewCoordinator: ObservableObject, Coordinator {
+class LoginViewCoordinator: ObservableObject, SwiftUICoordinator {
     
     @Published var signUpViewCoordinator: SignUpViewCoordinator?
     
@@ -22,6 +22,5 @@ class LoginViewCoordinator: ObservableObject, Coordinator {
             signUpViewCoordinator = nil
         }
     }
-    
 
 }

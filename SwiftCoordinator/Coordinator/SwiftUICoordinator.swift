@@ -1,5 +1,5 @@
 //
-//  Coordinator.swift
+//  SwiftUICoordinator.swift
 //  SwiftCoordinator
 //
 //  Created by Hitarth on 06/07/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol Coordinator: AnyObject {
+protocol SwiftUICoordinator: AnyObject {
     var popToRootView: Bool? { get set }
     
     func openView<T: ObservableObject>(coordinator: T)
@@ -15,7 +15,7 @@ protocol Coordinator: AnyObject {
     func changeRootView<T: View>(view: T)
 }
 
-extension Coordinator {
+extension SwiftUICoordinator {
     
     var popToRootView: Bool? {
         get {self.popToRootView}

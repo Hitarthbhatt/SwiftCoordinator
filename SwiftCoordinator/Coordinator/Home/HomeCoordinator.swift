@@ -8,16 +8,13 @@
 import SwiftUI
 import Combine
 
-class HomeCoordinator: ObservableObject, Coordinator {
-    // Declared from 'Coordinator' protocol.
+class HomeCoordinator: ObservableObject, SwiftUICoordinator {
+    
     @Published var popToRootView: Bool?
     
     @Published var firstViewCoordinator: FirstViewCoordinator?
     @Published var secondViewCoordinator: SecondViewCoordinator?
-    
-    @Published var showFirstViewSheet: Bool = false
-    @Published var showFirstViewPopover: Bool = false
-    
+   
     var cancellables: Set<AnyCancellable> = []
     
     init() {

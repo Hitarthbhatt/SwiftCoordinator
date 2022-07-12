@@ -25,7 +25,7 @@ struct FirstView: View {
             })
              
             Button(action: {
-                firstViewCoordinator.openView(coordinator: SecondViewCoordinator(coordinator: firstViewCoordinator.self))
+                firstViewCoordinator.openView(coordinator: SecondViewCoordinator(coordinator: firstViewCoordinator))
             }, label: {
                 Text("Go To Next")
                     .padding(10)

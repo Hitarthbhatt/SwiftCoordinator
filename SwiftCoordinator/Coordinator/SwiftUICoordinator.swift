@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+typealias CompletionAction = ()->Void
+
 protocol SwiftUICoordinator: AnyObject {
     var popToRootView: Bool? { get set }
+    var closeView: CompletionAction { get set }
     
-    func openView<T: ObservableObject>(coordinator: T)
-    func closeView<T: ObservableObject>(coordinator: T)
+    func openView<T: ObservableObject>(coordinator: T.Type)
     func changeRootView<T: View>(view: T)
 }
 
@@ -20,6 +22,11 @@ extension SwiftUICoordinator {
     var popToRootView: Bool? {
         get {self.popToRootView}
         set {self.popToRootView = newValue}
+    }
+    
+    var closeView: CompletionAction {
+        get {self.closeView}
+        set {self.closeView = newValue}
     }
 
     func changeRootView<T: View>(view: T) {

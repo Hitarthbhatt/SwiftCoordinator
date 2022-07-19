@@ -16,7 +16,7 @@ struct SecondView: View {
         
         VStack {
             Button(action: {
-                secondViewCoordinator.popToPrevious()
+                secondViewCoordinator.closeView()
             }, label: {
                 Text("Go Back")
                     .padding(10)
@@ -46,6 +46,6 @@ struct SecondView: View {
 
 struct SecondView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondView(secondViewCoordinator: SecondViewCoordinator(coordinator: HomeCoordinator()))
+        SecondView(secondViewCoordinator: SecondViewCoordinator(closeView: {}))
     }
 }

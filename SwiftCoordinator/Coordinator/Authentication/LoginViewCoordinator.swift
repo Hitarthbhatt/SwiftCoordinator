@@ -11,15 +11,9 @@ class LoginViewCoordinator: ObservableObject, SwiftUICoordinator {
     
     @Published var signUpViewCoordinator: SignUpViewCoordinator?
     
-    func openView<T>(coordinator: T) where T : ObservableObject {
+    func openView<T>(coordinator: T.Type) where T : ObservableObject {
         if let viewModel = coordinator as? SignUpViewCoordinator {
             signUpViewCoordinator = viewModel
-        }
-    }
-    
-    func closeView<T>(coordinator: T) where T : ObservableObject {
-        if coordinator is SignUpViewCoordinator {
-            signUpViewCoordinator = nil
         }
     }
 

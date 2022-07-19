@@ -38,11 +38,11 @@ struct HomeView: View {
             
             HStack(spacing: 50) {
                 boxView(name: "Navigation", color: .purple) {
-                    homeCoordinator.openView(coordinator: FirstViewCoordinator(coordinator: homeCoordinator))
+                    homeCoordinator.openView(coordinator: FirstViewCoordinator.self)
                 }
                 
                 boxView(name: "Sheet", color: .orange) {
-                    homeCoordinator.openView(coordinator: SecondViewCoordinator(coordinator: homeCoordinator.self))
+                    homeCoordinator.openView(coordinator: SecondViewCoordinator.self)
                 }
             }
             

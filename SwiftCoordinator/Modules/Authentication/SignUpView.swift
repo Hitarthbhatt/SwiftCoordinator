@@ -21,11 +21,11 @@ struct SignUpView: View {
                 credentialField()
                 
                 signUpButton {
-                    signupViewModel.coordinator.changeRootView(view: HomeView())
+                    signupViewModel.changeRootView(view: HomeView())
                 }
                 
                 goBackButton {
-                    signupViewModel.popToPrevious()
+                    signupViewModel.closeView()
                 }
                 
                 Spacer()

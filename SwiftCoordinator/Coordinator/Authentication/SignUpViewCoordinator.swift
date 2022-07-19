@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-class SignUpViewCoordinator: ObservableObject {
+class SignUpViewCoordinator: ObservableObject, SwiftUICoordinator {
     
-    let coordinator: SwiftUICoordinator
+    var closeView: CompletionAction
     
-    init(coordinator: SwiftUICoordinator) {
-        self.coordinator = coordinator
+    init(closeView: @escaping CompletionAction) {
+        self.closeView = closeView
     }
     
-    func popToPrevious() {
-        coordinator.closeView(coordinator: self)
+    func openView<T>(coordinator: T.Type) where T : ObservableObject {
+        
     }
     
 }

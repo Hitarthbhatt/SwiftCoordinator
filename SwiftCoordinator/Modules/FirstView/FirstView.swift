@@ -13,7 +13,7 @@ struct FirstView: View {
     var body: some View {
         VStack {
             Button(action: {
-                firstViewCoordinator.popToPrevious()
+                firstViewCoordinator.closeView()
             }, label: {
                 Text("Go Back")
                     .padding(10)
@@ -25,7 +25,7 @@ struct FirstView: View {
             })
              
             Button(action: {
-                firstViewCoordinator.openView(coordinator: SecondViewCoordinator(coordinator: firstViewCoordinator))
+                firstViewCoordinator.openView(coordinator: SecondViewCoordinator.self)
             }, label: {
                 Text("Go To Next")
                     .padding(10)

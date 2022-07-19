@@ -25,7 +25,7 @@ struct LoginView: View {
                 }
                 
                 signUpButton {
-                    loginViewModel.openView(coordinator: SignUpViewCoordinator(coordinator: loginViewModel))
+                    loginViewModel.openView(coordinator: SignUpViewCoordinator.self)
                 }
                 
                 Spacer()

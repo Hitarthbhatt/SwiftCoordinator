@@ -33,21 +33,16 @@ class HomeCoordinator: ObservableObject, SwiftUICoordinator {
         secondViewCoordinator = nil
     }
     
-    func openView<T>(coordinator: T) where T : ObservableObject {
-        if let viewModel = coordinator as? FirstViewCoordinator {
-            firstViewCoordinator = viewModel
+    func openView<T>(coordinator: T.Type) where T : ObservableObject {
+        if coordinator == FirstViewCoordinator.self {
+            firstViewCoordinator = FirstViewCoordinator(closeView: {
+                self.firstViewCoordinator = nil
+            })
         }
-        if let viewModel = coordinator as? SecondViewCoordinator {
-            secondViewCoordinator = viewModel
-        }
-    }
-    
-    func closeView<T>(coordinator: T) where T : ObservableObject {
-        if coordinator is FirstViewCoordinator {
-            firstViewCoordinator = nil
-        }
-        if coordinator is SecondViewCoordinator {
-            secondViewCoordinator = nil
+        if coordinator == SecondViewCoordinator.self {
+            secondViewCoordinator = SecondViewCoordinator(closeView: {
+                self.secondViewCoordinator = nil
+            })
         }
     }
     

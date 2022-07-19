@@ -11,25 +11,17 @@ class FirstViewCoordinator: ObservableObject, SwiftUICoordinator {
     
     @Published var secondViewCoordinator: SecondViewCoordinator?
     
-    private let coordinator: SwiftUICoordinator
+    var closeView: CompletionAction
     
-    init(coordinator: SwiftUICoordinator) {
-        self.coordinator = coordinator
+    init(closeView: @escaping CompletionAction) {
+        self.closeView = closeView
     }
     
-    func popToPrevious() {
-        coordinator.closeView(coordinator: self)
-    }
-    
-    func openView<T>(coordinator: T) where T : ObservableObject {
-        if let viewModel = coordinator as? SecondViewCoordinator {
-            secondViewCoordinator = viewModel
-        }
-    }
-    
-    func closeView<T>(coordinator: T) where T : ObservableObject {
-        if coordinator is SecondViewCoordinator {
-            secondViewCoordinator = nil
+    func openView<T>(coordinator: T.Type) where T : ObservableObject {
+        if coordinator == SecondViewCoordinator.self {
+            secondViewCoordinator = SecondViewCoordinator(closeView: {
+                self.secondViewCoordinator = nil
+            })
         }
     }
     

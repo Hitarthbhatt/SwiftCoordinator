@@ -9,20 +9,13 @@ import SwiftUI
 
 class SecondViewCoordinator: ObservableObject, SwiftUICoordinator, Identifiable {
     
-    private let coordinator: SwiftUICoordinator
+    var closeView: CompletionAction
     
-    init(coordinator: SwiftUICoordinator) {
-        self.coordinator = coordinator
+    init(closeView: @escaping CompletionAction) {
+        self.closeView = closeView
     }
     
-    func popToPrevious() {
-        coordinator.closeView(coordinator: self)
+    func openView<T>(coordinator: T.Type) where T : ObservableObject {
     }
-    
-    func openView<T>(coordinator: T) where T : ObservableObject {
-    }
-    
-    func closeView<T>(coordinator: T) where T : ObservableObject {
-    }
-    
+
 }
